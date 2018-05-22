@@ -1,0 +1,14 @@
+1. States = rownames(USArrests)
+Get states names with ‘w’.
+Get states names with ‘W’.
+Ans:
+States = rownames(USArrests)
+
+States[grep("w", States)]
+
+States[grep("W", States)]
+
+2. Prepare a Histogram of the number of characters in each US state.
+
+
+Ans:hist(nchar(States),col="red")
