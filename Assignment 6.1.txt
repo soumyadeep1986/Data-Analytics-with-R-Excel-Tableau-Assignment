@@ -1,0 +1,37 @@
+1. Import the Titanic Dataset from the link Titanic Data Set.
+Perform the following:
+a. Preprocess the passenger names to come up with a list of titles that represent families
+and represent using appropriate visualization graph.
+
+Ans:
+
+train$Name<-as.character(train$Name)
+
+train$familysize<-train$SibSp+train$Parch+1
+
+train$surname<-sapply(train$Name,FUN=function(x){strsplit(x,split='[,.]')[[1]][1]})
+
+train$familyID<-paste(as.character(train$familysize),train$surname,sep="")
+
+train$familyID[train$familysize<=2]<-'small'
+
+library(ggplot2)
+
+ggplot(data = train, aes(x = train$familyID, y = train$familysize, fill =Sex )) + 
+  geom_bar(stat="Identity")
+
+b. Represent the proportion of people survived from the family size using a graph.
+
+Ans:plot(train$familysize,train$Survived)
+
+c. Impute the missing values in Age variable using Mice Library, create two different
+graphs showing Age distribution before and after imputation.
+
+Ans:- Before Imputation: 
+boxplot(train$Age)
+
+After Imputation:
+library("mice")
+mice(tarin)
+boxplot(train$Age)
+
