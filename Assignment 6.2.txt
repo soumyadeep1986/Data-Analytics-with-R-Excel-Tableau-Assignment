@@ -1,0 +1,14 @@
+Import the Titanic Dataset from the link Titanic Data Set.
+Perform the following:
+a. Is there any difference in fares by different class of tickets?
+Note - Show a boxplot displaying the distribution of fares by class
+
+Ans:boxplot(train$Pclass,train$Fare)
+ss
+b. Is there any association with Passenger class and gender?
+Note – Show a stacked bar chart
+
+Ans:
+library(ggplot2) 
+ggplot(data = train, aes(x = Pclass, y = Survived, fill =Sex )) + 
+  geom_bar(stat="Identity")
