@@ -1,0 +1,6 @@
+Create a box and whisker plot by class using mtcars dataset.
+
+Ans:- boxplot(mpg ~ cyl, data = mtcars, xlab = "Number of Cylinders",
+        ylab = "Miles Per Gallon", main = "Mileage Data")
+
+     boxplot(mtcars$mpg ~ factor(mtcars$vs), main = "Boxplot of Miles/Gallon for Different Engine Types")

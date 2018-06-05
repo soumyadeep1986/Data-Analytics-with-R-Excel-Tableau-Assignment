@@ -1,0 +1,13 @@
+1. Write a program to create barplots for all the categorical columns in mtcars.
+Ans:-boxplot(mtcars[,c(8,9,10,11)])
+
+2. Create a scatterplot matrix by gear types in mtcars dataset.
+Ans:-# Packages
+library(car)
+library(RColorBrewer)
+
+scatterplotMatrix(~mpg+disp+drat|gear, data=mtcars ,main="Scatter plot with gear types")
+
+3. Write a program to create a plot density by class variable.
+
+Ans:plot(density(mtcars$mpg))
