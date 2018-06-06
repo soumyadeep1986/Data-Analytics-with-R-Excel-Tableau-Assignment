@@ -1,0 +1,16 @@
+1. A recent national study showed that approximately 44.7% of college students have used Wikipedia as a source in at least one of their term papers. Let X equal the number of students in a random sample of size n = 31 who have used Wikipedia as a source.
+Perform the below functions
+a. Find the probability that X is equal to 17
+Ans: 31C17 * (.447)^17 * (.553)^14
+
+b. Find the probability that X is at most 13
+Ans: 31C13 * (.447)^13 * (.553)^18+................+31C1 * (.447)^1 * (.553)^30
+
+c. Find the probability that X is bigger than 11.
+Ans: 31C12 * (.447)^12 * (.553)^19+................+31C31 * (.447)^31
+
+d. Find the probability that X is at least 15.
+Ans: 31C15 * (.447)^15 * (.553)^16+................+31C31 * (.447)^31 
+
+e. Find the probability that X is between 16 and 19, inclusive
+Ans: 31C16 * (.447)^16 * (.553)^15+................+31C19 * (.447)^19 * (.553)^12
